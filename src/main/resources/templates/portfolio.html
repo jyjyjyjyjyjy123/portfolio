@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>portfolio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/jquery.fullpage.js"></script>
+<link rel="stylesheet" href="assets/css/jquery.fullpage.css">
+<link rel="stylesheet" href="assets/css/page.css">
+<style>
+	.sub li a {
+		color: black;
+	}
+	.section {
+	    width: 100%;
+	    height: 100%;
+	    position: relative;
+	}
+	.section_detail{
+	    margin: 100px 10%;
+	}
+	
+	.gnb {
+		position: fixed;
+	    z-index: 800;
+	    width: 100%;
+	    height: 60px;
+	    padding: 0 24px;
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	}
+	.gnb ul {
+	    height: 100%;
+	    display: flex;
+	    align-items: stretch;
+	}
+	.gnb ul li {
+	    position: relative;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    transition: 0.3s;
+	}
+	.gnb ul li .sub {
+	    background: #ffffffcc;
+	    width: 100%;
+	    height: 0;
+	    overflow: hidden;
+	    flex-flow: column nowrap;
+	    gap: 0;
+	    position: absolute;
+	    top: 100%;
+	    z-index: -1;
+	}
+	.gnb a , .gnb h1{
+	    color: #ffffff;
+	    text-shadow: 0px 2px 5px rgba(87, 124, 147, 0.3);
+	    white-space: nowrap;
+	    font-weight: 500;
+	}
+	.gnb ul li a {
+		padding: 16px 12px;
+	  	width: 100%;
+	  	text-align: center;
+	}
+	/* nav 액티브 */
+	.gnb ul li.sub_on .sub {
+	  height: 152px; /* 38*4px */
+	}
+	.gnb > ul > li:hover {
+	  background: #ffffffcc;
+	}
+	.gnb > ul > li:hover > a {
+	  color: #577c93;
+	}
+	.gnb > ul > li.active,
+	.gnb > ul > li.subpage_on {
+	  background: #ffffff33;
+	}
+	.gnb ul li .sub li a:hover {
+	  opacity: 1;
+	  background: #577c93;
+	  color: #fff;
+	  width: 100%;
+	}
+	.photo {
+	    background-size: cover;
+	    background-position: top;
+	    background-color: #ffffff33;
+	    background-image: url(../img/about_me.jpg);
+	    width: 180px;
+	    height: 240px;
+	    margin-bottom: 20px;
+	}
+	.section_title{
+		font-size: 40px;
+		text-align: center;
+		color: #fff;
+		font-family: 'Montserrat';
+	}
+	.section1_detail {
+		display: flex;
+		height: 70%;
+	}
+	.section1_detail > div > div {
+		margin-bottom: 30px;
+		color: #fff;
+	}
+	.section1_detail > div:nth-child(1){
+		margin: 0 50px;
+	}
+	.section1_detail > div:nth-child(1) > div ul li{
+	    margin-bottom: 8px;
+	    text-align: right;
+	}
+	.section1_detail > div:nth-child(2) > div ul li{
+		display: flex;
+		margin-bottom: 8px;
+	}
+	.section1_detail > div:nth-child(2) > div ul li p:nth-child(1){
+		margin-right: 20px;
+		width: 100px;
+	}
+	.subheading{
+		font-size: 1.25rem;
+	    color: #fff;
+	    font-family: 'Montserrat';
+	    font-weight: 600;
+	    margin-bottom: 10px;
+	}
+	.skill_box{
+		width: 100%;
+		height: 100%;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		margin: 0 5px;
+		background-color: #fff;
+		padding: 10px 10px;
+	}
+	.small_skill_box{
+		height: 49%;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		background-color: #fff;
+		padding: 10px 10px;
+		margin-bottom: 10px;
+	}
+	.skill_boxs{
+		width: 100%;
+		height: 100%;
+		margin: 0 5px;
+	}
+	.section2_detail{
+		display: flex;
+		height: 70%;
+		text-align: center;
+	}
+	.section2_detail img{
+		width: 70%;
+	}
+</style>
+</head>
+<body>
+	<!-- 마우스커서 -->
+	<div id="cursor" class="intro_ani"></div>
+	
+	
+	<nav class="gnb">
+      <h1>JaeYong Lee PORTFOLIO</h1>
+      <ul id="myMenu">
+        <li data-menuanchor="intro"><a href="#intro">INTRO</a></li>
+        <li data-menuanchor="section1"><a href="#section1">ABOUT</a></li>
+        <li data-menuanchor="section2"><a href="#section2">SKILL</a></li>
+        <li data-menuanchor="section3"><a href="#section3">ARCHIVING</a></li>
+        <li data-menuanchor="section4"><a href="#section4">WEB<span class="mobile_skip"> DEVELOPER</span></a>
+          <ul class="sub">
+            <li data-menuanchor="section5"><a href="#section5">PORT VOL.01</a></li>
+            <li data-menuanchor="section6"><a href="#section6">PORT VOL.02</a></li>
+            <li data-menuanchor="section7"><a href="#section7">PORT VOL.03</a></li>
+            <li data-menuanchor="section8"><a href="#section8">PORT VOL.04</a></li>
+          </ul>
+        </li>
+        <li data-menuanchor="section9"><a href="#section9"><span class="mobile_skip"> CONTACT</span></a></li>
+      </ul>
+    </nav>
+	<div class="fullpage">
+	    <div class="section" id="intro">
+			<h1 class="section_title">intro</h1>
+	    	 <div class="section_detail" >
+	        </div>
+	    </div>
+		<div class="section" id="section1">
+			<h1 class="section_title">안녕하세요</h1>
+	        <div class="section_detail section1_detail">
+	        	<div>
+					<img src="assets/img/ljy.jpg" class="photo">
+					<div>
+						<ul>
+							<li>
+								<p>이재용</p>
+							</li>
+							<li>
+								<p>1999.10.24</p>
+							</li>
+							<li>
+								<p>010-7255-2428</p>
+							</li>
+							<li>
+								<p>t2681975@gmail.com</p>
+							</li>
+						</ul>
+					</div>
+	        	</div>
+				<div>
+					<div>
+						<h2 class="subheading">ABOUT ME</h2>
+						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
+						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
+						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
+					</div>
+					<div>
+						<h2 class="subheading">CERTIFICATE</h2>
+						<ul>
+							<li>
+								<p>2022.04.12</p>
+								<p>네트워크 관리사2급</p>
+							</li>
+							<li>
+								<p>2018.02.21</p>
+								<p>운전면허2종보통 (국가전문자격)</p>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="subheading">EDUCATION</h2>
+						<ul>
+							<li>
+								<p>2022.04.12</p>
+								<p>네트워크 관리사2급</p>
+							</li>
+							<li>
+								<p>2018.02.21</p>
+								<p>운전면허2종보통 (국가전문자격)</p>
+							</li>
+							<li>
+								<p>2018.02.21</p>
+								<p>운전면허2종보통 (국가전문자격)</p>
+							</li>
+							<li>
+								<p>2018.02.21</p>
+								<p>운전면허2종보통 (국가전문자격)</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	    <div class="section" id="section2">
+			<h1 class="section_title">SKILLS</h1>
+			<div class="section_detail section2_detail" >
+				<div class="skill_box">
+					<h2>Back-End</h2>
+					<hr>
+					<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+						<img src="assets/img/Java_logo.png"/>
+						<img src="assets/img/spring_logo.png"/>
+						<img src="assets/img/spring_boot_logo.png"/>
+						<img src="assets/img/mybatis_logo.png"/>
+						<img src="assets/img/rest_api_icon.png"/>
+					</div>
+				</div>
+				<div class="skill_boxs">
+					<div class="small_skill_box">
+						<h2>Front-End</h2>
+						<hr>
+						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+							<img src="assets/img/html_css_js.png" />
+							<img src="assets/img/jQuery_logo.png" />
+						</div>
+					</div>
+					<div class="small_skill_box">
+						<h2>Version Control</h2>
+						<hr>
+						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+							<img src="assets/img/github_logo.png"/>
+							<img src="assets/img/sourcetree_logo.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="skill_box">
+					<h2>Tools</h2>
+					<hr>
+					<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+						<img src="assets/img/eclipse_logo.png"/>
+						<img src="assets/img/visualstudio_code_logo.png"/>
+						<img src="assets/img/sql_developer_logo.jpg"/>
+						<img src="assets/img/exerd_logo.jpg"/>
+						<img src="assets/img/postman_logo.png"/>
+					</div>
+				</div>
+				<div class="skill_boxs">
+					<div class="small_skill_box">
+						<h2>Server</h2>
+						<hr>
+						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+							<img src="assets/img/apache_tomcat_logo.png"/>
+							<img src="assets/img/amazon_ec2_logo.png"/>
+						</div>
+					</div>
+					<div class="small_skill_box">
+						<h2>DB</h2>
+						<hr>
+						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
+							<img src="assets/img/oracle_logo.png" />
+						</div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	    <div class="section" id="section3">
+	    	 <div class="section_detail" >
+				<h1>3</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section4">
+	    	 <div class="section_detail" >
+				<h1>4</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section5">
+	    	 <div class="section_detail" >
+				<h1>5</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section6">
+	    	 <div class="section_detail" >
+				<h1>6</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section7">
+	    	 <div class="section_detail" >
+				<h1>7</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section8">
+	    	 <div class="section_detail" >
+				<h1>8</h1>
+	        </div>
+	    </div>
+	    <div class="section" id="section9">
+	    	 <div class="section_detail" >
+				<h1>9</h1>
+	        </div>
+	    </div>
+	</div>
+</body>
+<script>
+
+	$(function() {
+	    var page = $('.fullpage').fullpage({
+	        //네비게이션 보이기
+	        navigation : true,
+	        //네비게이션 위치 지정
+	        navigationPosition : 'right',
+	        navigationColor: 'white',
+	        //각 섹션의 배경색상 지정 (6자의 핵사코드 작성가능)
+	        sectionsColor : ['#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93'],
+	        
+	        
+	        autoScrolling: true,
+	        scrollBar: true,
+	        scrollingSpeed: 1200,
+	        paddingTop: '80px',
+	        paddingBottom: '80px',
+	        
+	        //메뉴
+	        menu : '.gnb',
+	        anchors : ['intro','section1', 'section2', 'section3', 'section4','section5','section6','section7', 'section8', 'section9'],
+	        
+	        
+		    onLeave: function (index, nextIndex, direction) {
+		        if (index == 1) {
+		          $.fn.fullpage.setScrollingSpeed(1500);
+		        } else {
+		          $.fn.fullpage.setScrollingSpeed(600);
+		        }
+		        if (window.innerWidth > 1200) {
+		          $('.web_section').css({ '--afterWidth': '80%' });
+		        } else {
+		          $('.web_section').css({ '--afterWidth': '90%' });
+		        }
+		        $('.web_section').css({
+		          '--afterHeight': '100%',
+		          '--afterBg': '#ffffff44',
+		        });
+		        if (nextIndex >= $('.section').length - 1) {
+		          $('#cursor').addClass('active');
+		        } else {
+		          $('#cursor').removeClass('active');
+		        }
+		        if (
+		          $('.section')
+		            .eq(index - 1)
+		            .is('.web_section')
+		        ) {
+		          this.find('.bg_circle').removeClass('active');
+		        }
+		        if (
+		          $('.section')
+		            .eq(nextIndex - 1)
+		            .is('.web_section')
+		        ) {
+		          $('.gnb > li:nth-child(5)').addClass('subpage_on');
+		        } else {
+		          $('.gnb > li:nth-child(5)').removeClass('subpage_on');
+		        }
+		      },
+		      afterLoad: function (origin, destination, direction, trigger) {
+		        if (window.innerWidth > 800) {
+		          $('.web_section').css({
+		            '--afterWidth': '100%',
+		            '--afterHeight': '360px',
+		            '--afterBg': '#ffffff99',
+		          });
+		        } else {
+		          $('.web_section').css({
+		            '--afterWidth': '100%',
+		            '--afterHeight': '680px',
+		            '--afterBg': '#ffffffcc',
+		          });
+		        }
+		        if (
+		          $('.section')
+		            .eq(destination - 1)
+		            .is('.web_section')
+		        ) {
+		          this.find('.bg_circle').addClass('active');
+		          this.find('.mockup_all').addClass('scrollOn');
+		          this.find('.info').addClass('scrollOn');
+		        }
+		      },
+		      responsiveWidth: 500,
+		      afterResponsive: function (isResponsive) {
+		        if (isResponsive) {
+		          $.fn.fullpage.setAutoScrolling(false);
+		        }
+		      },
+		    });
+		});
+	
+	let main = document.querySelector('#myMenu > li:nth-child(5)');
+	let sub = document.querySelector('#myMenu .sub');
+
+	main.addEventListener('mouseover', function () {
+	  sub.style.transition = '.4s';
+	  sub.style.height = '192px';
+	});
+	main.addEventListener('mouseout', function () {
+	  sub.style.transition = 'none';
+	  sub.style.height = '0';
+	});
+	
+	//mouse cursor
+	let mouseX;
+	let mouseY;
+	const cursor = document.querySelector('#cursor');
+
+	document.addEventListener('mousemove', function (e) {
+	  mouseX = e.clientX;
+	  mouseY = e.clientY;
+	  cursor.style.left = mouseX + 'px';
+	  cursor.style.top = mouseY + 'px';
+	});
+	
+	const modal_btn = document.querySelectorAll('.modal_btn');
+	const modal_popup_bg = document.querySelectorAll('.modal_popup_bg');
+	const modal_close = document.querySelectorAll('.modal_popup_bg .close_btn');
+
+	modal_btn.forEach(function (target, index) {
+	  target.addEventListener('click', function () {
+	    modal_popup_bg[index].style.display = 'block';
+	    $.fn.fullpage.setAllowScrolling(false); //���섏?��吏� �ㅽ겕濡�? �댁?��
+	    cursor.classList.add('active');
+	  });
+	});
+
+	modal_close.forEach(function (target, index) {
+	  target.addEventListener('click', function () {
+	    modal_popup_bg[index].style.display = 'none';
+	    $.fn.fullpage.setAllowScrolling(true); //���섏?��吏� �ㅽ겕濡�? �ш컻
+	    cursor.classList.remove('active');
+	  });
+	});
+
+	modal_popup_bg.forEach(function (target, index) {
+	  target.addEventListener('click', function (e) {
+	    if (this == e.target)
+	      //諛곌�? ��???�� �� 李� �リ�?
+	      target.style.display = 'none';
+	    $.fn.fullpage.setAllowScrolling(true);
+	    cursor.classList.remove('active');
+	  });
+	});
+</script>
+</html>
