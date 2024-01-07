@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="assets/css/jquery.fullpage.css">
 <link rel="stylesheet" href="assets/css/page.css">
 <style>
+	body {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-use-select: none;
+	}
 	.sub li a {
 		color: black;
 	}
@@ -17,7 +22,7 @@
 	    position: relative;
 	}
 	.section_detail{
-	    margin: 100px 10%;
+	    margin: 100px 15%;
 	}
 	
 	.gnb {
@@ -88,7 +93,6 @@
 	    background-size: cover;
 	    background-position: top;
 	    background-color: #ffffff33;
-	    background-image: url(../img/about_me.jpg);
 	    width: 180px;
 	    height: 240px;
 	    margin-bottom: 20px;
@@ -97,35 +101,35 @@
 		font-size: 40px;
 		text-align: center;
 		color: #fff;
-		font-family: 'Montserrat';
+		font-family: 'KNUTRUTHTTF';
 	}
-	.section1_detail {
+	.about_detail {
 		display: flex;
 		height: 70%;
 	}
-	.section1_detail > div > div {
+	.about_detail > div > div {
 		margin-bottom: 30px;
 		color: #fff;
 	}
-	.section1_detail > div:nth-child(1){
+	.about_detail > div:nth-child(1){
 		margin: 0 50px;
 	}
-	.section1_detail > div:nth-child(1) > div ul li{
+	.about_detail > div:nth-child(1) > div ul li{
 	    margin-bottom: 8px;
 	    text-align: right;
 	}
-	.section1_detail > div:nth-child(2) > div ul li{
+	.about_detail > div:nth-child(2) > div ul li{
 		display: flex;
 		margin-bottom: 8px;
 	}
-	.section1_detail > div:nth-child(2) > div ul li p:nth-child(1){
+	.about_detail > div:nth-child(2) > div ul li p:nth-child(1){
 		margin-right: 20px;
 		width: 100px;
 	}
 	.subheading{
 		font-size: 1.25rem;
 	    color: #fff;
-	    font-family: 'Montserrat';
+	    font-family: 'KNUTRUTHTTF';
 	    font-weight: 600;
 	    margin-bottom: 10px;
 	}
@@ -151,13 +155,52 @@
 		height: 100%;
 		margin: 0 5px;
 	}
-	.section2_detail{
+	.skill_detail{
 		display: flex;
 		height: 70%;
 		text-align: center;
 	}
-	.section2_detail img{
+	.skill_detail img{
 		width: 70%;
+	}
+	.project_detail{
+		height: 70%;
+		text-align: center;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		background-color: #fff;
+		display: flex;
+	}
+	.project_detail img{
+		width: 30%;
+		border-radius: 10px;
+		margin: 30px 30px;
+		margin-left: 70px;
+		border: 1px solid #999999;
+	}
+	.project_detail > div {
+		margin: auto 30px;
+		margin-right: 70px;
+		text-align: left;
+	}
+	.project_detail > div > p{
+		margin: 15px 0;
+	}
+	.project_detail li {
+		display: flex;
+		margin: 15px 0;
+	}
+	.project_detail li p:nth-child(1) {
+		min-width: 120px;
+	}
+	.project_detail hr {
+		border: 1px solid #999999;
+	}
+	p {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 26px;
 	}
 </style>
 </head>
@@ -169,19 +212,17 @@
 	<nav class="gnb">
       <h1>JaeYong Lee PORTFOLIO</h1>
       <ul id="myMenu">
-        <li data-menuanchor="intro"><a href="#intro">INTRO</a></li>
-        <li data-menuanchor="section1"><a href="#section1">ABOUT</a></li>
-        <li data-menuanchor="section2"><a href="#section2">SKILL</a></li>
-        <li data-menuanchor="section3"><a href="#section3">ARCHIVING</a></li>
-        <li data-menuanchor="section4"><a href="#section4">WEB<span class="mobile_skip"> DEVELOPER</span></a>
+        <li data-menuanchor="introPage"><a href="#introPage">INTRO</a></li>
+        <li data-menuanchor="aboutPage"><a href="#aboutPage">ABOUT</a></li>
+        <li data-menuanchor="skillPage"><a href="#skillPage">SKILL</a></li>
+        <li data-menuanchor="projectonePage"><a href="#projectonePage"><span class="mobile_skip">PROJECTS</span></a>
           <ul class="sub">
-            <li data-menuanchor="section5"><a href="#section5">PORT VOL.01</a></li>
-            <li data-menuanchor="section6"><a href="#section6">PORT VOL.02</a></li>
-            <li data-menuanchor="section7"><a href="#section7">PORT VOL.03</a></li>
-            <li data-menuanchor="section8"><a href="#section8">PORT VOL.04</a></li>
+            <li data-menuanchor="projectonePage"><a href="#projectonePage">VOL.01</a></li>
+            <li data-menuanchor="projecttwoPage"><a href="#projecttwoPage">VOL.02</a></li>
+            <li data-menuanchor="projectthreePage"><a href="#projectthreePage">VOL.03</a></li>
           </ul>
         </li>
-        <li data-menuanchor="section9"><a href="#section9"><span class="mobile_skip"> CONTACT</span></a></li>
+        <li data-menuanchor="contactPage"><a href="#contactPage"><span class="mobile_skip"> CONTACT</span></a></li>
       </ul>
     </nav>
 	<div class="fullpage">
@@ -190,9 +231,9 @@
 	    	 <div class="section_detail" >
 	        </div>
 	    </div>
-		<div class="section" id="section1">
+		<div class="section" id="about">
 			<h1 class="section_title">안녕하세요</h1>
-	        <div class="section_detail section1_detail">
+	        <div class="section_detail about_detail">
 	        	<div>
 					<img src="assets/img/ljy.jpg" class="photo">
 					<div>
@@ -215,9 +256,7 @@
 				<div>
 					<div>
 						<h2 class="subheading">ABOUT ME</h2>
-						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
-						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
-						<p>안녕 안녕 안녕하세요 안녕 안녕 안녕하세요 안~ 녕~ 안녕하세요~</p>
+						<p>안녕하세요. 신입 Java 개발자 이재용입니다.</p>
 					</div>
 					<div>
 						<h2 class="subheading">CERTIFICATE</h2>
@@ -253,12 +292,23 @@
 							</li>
 						</ul>
 					</div>
+					<div>
+						<h2 class="subheading">ARCHIVING</h2>
+						<ul>
+							<li>
+								<p>GitHub</p>
+								<a href="https://github.com/jyjyjyjyjyjy123">
+									<p style="cursor: pointer; text-decoration : underline;">바로가기</p>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 	        </div>
 	    </div>
-	    <div class="section" id="section2">
+	    <div class="section" id="skill">
 			<h1 class="section_title">SKILLS</h1>
-			<div class="section_detail section2_detail" >
+			<div class="section_detail skill_detail" >
 				<div class="skill_box">
 					<h2>Back-End</h2>
 					<hr>
@@ -318,143 +368,161 @@
 				</div>
 	        </div>
 	    </div>
-	    <div class="section" id="section3">
-	    	 <div class="section_detail" >
-				<h1>3</h1>
+	    <div class="section" id="projectone">
+			<h1 class="section_title">프로젝트1</h1>
+	    	 <div class="section_detail project_detail" >
+	    	 	<img src="assets/img/project1_main.png">
+	    	 	<div>
+	    	 		<p>
+	    	 			병원 약국 통합 검색, 예약 및 의학 정보 시스템은 다양한 의료 기관 및 약국 정보 검색, 예약 기능, 의학 정보 제공을 통해 사용자들이 효율적으로 의료 서비스를 이용할 수 있도록 구축된 플랫폼이다.
+	    	 		</p>
+	    	 		<hr>
+					<ul>
+						<li>
+							<p>주요 기능</p>
+							<p>병원 약국 통합 검색, 예약 및 의학 정보 시스템은 다양한 의료 기관 및 약국 정보 검색, 예약 기능, 의학 정보 제공</p>
+						</li>
+						<li>
+							<p>LANGUAGE</p>
+							<p>Java, Oracle Database 11g, HTML, CSS, JavaScript, JPS/Servlet</p>
+						</li>
+						<li>
+							<p>Tool</p>
+							<p>SQL developer, DBeaver,  eXERD, Eclipse, STS</p>
+						</li>
+						<li>
+							<p>PERIOD</p>
+							<p>2023/10/30 ~ 2023/11/17</p>
+						</li>
+						<li>
+							<p>담당 업무</p>
+							<p>병원 진료예약, 병원 및 약국 찾기, 병원 및 약국 상세보기</p>
+						</li>
+						<li>
+							<p>GitHub</p>
+							<p>대충 주소</p>
+						</li>
+					</ul>
+				</div>
 	        </div>
 	    </div>
-	    <div class="section" id="section4">
-	    	 <div class="section_detail" >
-				<h1>4</h1>
+	    <div class="section" id="projecttwo">
+			<h1 class="section_title">프로젝트2</h1>
+	    	 <div class="section_detail project_detail" >
+	    	 	<img src="assets/img/project3_1.png">
+	    	 	<div>
+	    	 		<p>
+	    	 			관리시스템 내 저장된 데이터 최적화, 데이터베이스 자체 기능 구현 및 최적화한 교육센터 관리시스템 데이터베이스 설계
+	    	 		</p>
+	    	 		<hr>
+					<ul>
+						<li>
+							<p>주요 기능</p>
+							<p>
+								기초 정보 관리, 교사 계정 관리, 개설 과정 관리, 개설 과목 관리, 교육생 관리,
+							   	시험 관리, 성적 관리 및 조회, 출결 관리 및 출결 조회, 컴퓨터 이상 관리 및 조회, 수료생 사후관리,
+							   	설문조사 관리, 진단평가 관리, 학습안내서 조회,	강의 스케줄 조회, 배점 입출력, 성적 입출력,
+							   	출결 조회, 수료생 사후 관리 및 조회, 설문조사	관리 및 조회, 진단평가 조회, 학습안내서 관리 및 조회
+							</p>
+						</li>
+						<li>
+							<p>LANGUAGE</p>
+							<p>Oracle Database 11g</p>
+						</li>
+						<li>
+							<p>Tool</p>
+							<p>SQL Developer, DBeaver, eXERD</p>
+						</li>
+						<li>
+							<p>PERIOD</p>
+							<p>2023/09/11~2023/09/18</p>
+						</li>
+						<li>
+							<p>담당 업무</p>
+							<p>교육생 컴퓨터 수리요청, 사후 관리, 학습안내서 조회, 설문조사, 진단평가 기능</p>
+						</li>
+						<li>
+							<p>GitHub</p>
+							<p>대충 주소</p>
+						</li>
+					</ul>
+				</div>
 	        </div>
 	    </div>
-	    <div class="section" id="section5">
-	    	 <div class="section_detail" >
-				<h1>5</h1>
+	    <div class="section" id="projectthree">
+			<h1 class="section_title">프로젝트3</h1>
+	    	 <div class="section_detail project_detail" >
+	    	 	<img src="assets/img/project1_main.png">
+	    	 	<div>
+	    	 		<p>
+	    	 			다양한 렌탈 업체를 모아서 사용자에게 편리함을 제공하는 렌탈업체 중개 서비스 플랫폼을 자바 콘슬의 파일 입출력 기반의 데이터 처리방식으로 제작한 프로젝트
+	    	 		</p>
+	    	 		<hr>
+					<ul>
+						<li>
+							<p>주요 기능</p>
+							<p>회원가입, ID 및 PW 찾기, 로그인, 마이페이지, 제품 리스트. 제품 렌탈, 상품 관리, A/S관리, 회원 관리</p>
+						</li>
+						<li>
+							<p>LANGUAGE</p>
+							<p>Java</p>
+						</li>
+						<li>
+							<p>Tool</p>
+							<p>Eclipse</p>
+						</li>
+						<li>
+							<p>PERIOD</p>
+							<p>2023/08/14 ~ 2023/08/23</p>
+						</li>
+						<li>
+							<p>담당 업무</p>
+							<p>마이페이지, 주문조회, 회원정보 조회/수정, A/S신청, 제품 반납, 카테고리 검색 및 선택, 제품리스트 출력, 렌탈 신청</p>
+						</li>
+						<li>
+							<p>GitHub</p>
+							<p>대충 주소</p>
+						</li>
+					</ul>
+				</div>
 	        </div>
 	    </div>
-	    <div class="section" id="section6">
+	    <div class="section" id="contact">
+			<h1 class="section_title">빈거</h1>
 	    	 <div class="section_detail" >
-				<h1>6</h1>
-	        </div>
-	    </div>
-	    <div class="section" id="section7">
-	    	 <div class="section_detail" >
-				<h1>7</h1>
-	        </div>
-	    </div>
-	    <div class="section" id="section8">
-	    	 <div class="section_detail" >
-				<h1>8</h1>
-	        </div>
-	    </div>
-	    <div class="section" id="section9">
-	    	 <div class="section_detail" >
-				<h1>9</h1>
 	        </div>
 	    </div>
 	</div>
 </body>
 <script>
 
-	$(function() {
-	    var page = $('.fullpage').fullpage({
+	$('.fullpage').fullpage({
+	        anchors : ['introPage','aboutPage','skillPage','projectonePage','projecttwoPage','projectthreePage','contactPage'],
 	        //네비게이션 보이기
 	        navigation : true,
 	        //네비게이션 위치 지정
 	        navigationPosition : 'right',
-	        navigationColor: 'white',
 	        //각 섹션의 배경색상 지정 (6자의 핵사코드 작성가능)
-	        sectionsColor : ['#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93'],
-	        
-	        
-	        autoScrolling: true,
-	        scrollBar: true,
+	        sectionsColor : ['#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93'],
+	        navigationTooltips: ['INTRO', 'ABOUT','SKILL','PROJECT_1','PROJECT_2','PROJECT_3','CONTACT'],
 	        scrollingSpeed: 1200,
 	        paddingTop: '80px',
 	        paddingBottom: '80px',
 	        
 	        //메뉴
-	        menu : '.gnb',
-	        anchors : ['intro','section1', 'section2', 'section3', 'section4','section5','section6','section7', 'section8', 'section9'],
+	        menu : '#myMenu',
 	        
 	        
-		    onLeave: function (index, nextIndex, direction) {
-		        if (index == 1) {
-		          $.fn.fullpage.setScrollingSpeed(1500);
-		        } else {
-		          $.fn.fullpage.setScrollingSpeed(600);
-		        }
-		        if (window.innerWidth > 1200) {
-		          $('.web_section').css({ '--afterWidth': '80%' });
-		        } else {
-		          $('.web_section').css({ '--afterWidth': '90%' });
-		        }
-		        $('.web_section').css({
-		          '--afterHeight': '100%',
-		          '--afterBg': '#ffffff44',
-		        });
-		        if (nextIndex >= $('.section').length - 1) {
-		          $('#cursor').addClass('active');
-		        } else {
-		          $('#cursor').removeClass('active');
-		        }
-		        if (
-		          $('.section')
-		            .eq(index - 1)
-		            .is('.web_section')
-		        ) {
-		          this.find('.bg_circle').removeClass('active');
-		        }
-		        if (
-		          $('.section')
-		            .eq(nextIndex - 1)
-		            .is('.web_section')
-		        ) {
-		          $('.gnb > li:nth-child(5)').addClass('subpage_on');
-		        } else {
-		          $('.gnb > li:nth-child(5)').removeClass('subpage_on');
-		        }
-		      },
-		      afterLoad: function (origin, destination, direction, trigger) {
-		        if (window.innerWidth > 800) {
-		          $('.web_section').css({
-		            '--afterWidth': '100%',
-		            '--afterHeight': '360px',
-		            '--afterBg': '#ffffff99',
-		          });
-		        } else {
-		          $('.web_section').css({
-		            '--afterWidth': '100%',
-		            '--afterHeight': '680px',
-		            '--afterBg': '#ffffffcc',
-		          });
-		        }
-		        if (
-		          $('.section')
-		            .eq(destination - 1)
-		            .is('.web_section')
-		        ) {
-		          this.find('.bg_circle').addClass('active');
-		          this.find('.mockup_all').addClass('scrollOn');
-		          this.find('.info').addClass('scrollOn');
-		        }
-		      },
-		      responsiveWidth: 500,
-		      afterResponsive: function (isResponsive) {
-		        if (isResponsive) {
-		          $.fn.fullpage.setAutoScrolling(false);
-		        }
-		      },
+		    
 		    });
-		});
 	
-	let main = document.querySelector('#myMenu > li:nth-child(5)');
+	
+	let main = document.querySelector('#myMenu > li:nth-child(4)');
 	let sub = document.querySelector('#myMenu .sub');
 
 	main.addEventListener('mouseover', function () {
 	  sub.style.transition = '.4s';
-	  sub.style.height = '192px';
+	  sub.style.height = '144px';
 	});
 	main.addEventListener('mouseout', function () {
 	  sub.style.transition = 'none';
@@ -471,36 +539,6 @@
 	  mouseY = e.clientY;
 	  cursor.style.left = mouseX + 'px';
 	  cursor.style.top = mouseY + 'px';
-	});
-	
-	const modal_btn = document.querySelectorAll('.modal_btn');
-	const modal_popup_bg = document.querySelectorAll('.modal_popup_bg');
-	const modal_close = document.querySelectorAll('.modal_popup_bg .close_btn');
-
-	modal_btn.forEach(function (target, index) {
-	  target.addEventListener('click', function () {
-	    modal_popup_bg[index].style.display = 'block';
-	    $.fn.fullpage.setAllowScrolling(false); //���섏?��吏� �ㅽ겕濡�? �댁?��
-	    cursor.classList.add('active');
-	  });
-	});
-
-	modal_close.forEach(function (target, index) {
-	  target.addEventListener('click', function () {
-	    modal_popup_bg[index].style.display = 'none';
-	    $.fn.fullpage.setAllowScrolling(true); //���섏?��吏� �ㅽ겕濡�? �ш컻
-	    cursor.classList.remove('active');
-	  });
-	});
-
-	modal_popup_bg.forEach(function (target, index) {
-	  target.addEventListener('click', function (e) {
-	    if (this == e.target)
-	      //諛곌�? ��???�� �� 李� �リ�?
-	      target.style.display = 'none';
-	    $.fn.fullpage.setAllowScrolling(true);
-	    cursor.classList.remove('active');
-	  });
 	});
 </script>
 </html>
