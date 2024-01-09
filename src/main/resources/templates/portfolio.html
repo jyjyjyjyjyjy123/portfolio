@@ -8,220 +8,12 @@
 <link rel="stylesheet" href="assets/css/jquery.fullpage.css">
 <link rel="stylesheet" href="assets/css/page.css">
 <style>
-	body {
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-use-select: none;
-	}
-	.sub li a {
-		color: black;
-	}
-	.section {
-	    width: 100%;
-	    height: 100%;
-	    position: relative;
-	}
-	.section_detail{
-	    margin: 100px 15%;
-	}
 	
-	.gnb {
-		position: fixed;
-	    z-index: 800;
-	    width: 100%;
-	    height: 60px;
-	    padding: 0 24px;
-	    display: flex;
-	    justify-content: space-between;
-	    align-items: center;
-	}
-	.gnb ul {
-	    height: 100%;
-	    display: flex;
-	    align-items: stretch;
-	}
-	.gnb ul li {
-	    position: relative;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	    transition: 0.3s;
-	}
-	.gnb ul li .sub {
-	    background: #ffffffcc;
-	    width: 100%;
-	    height: 0;
-	    overflow: hidden;
-	    flex-flow: column nowrap;
-	    gap: 0;
-	    position: absolute;
-	    top: 100%;
-	    z-index: -1;
-	}
-	.gnb a , .gnb h1{
-	    color: #ffffff;
-	    text-shadow: 0px 2px 5px rgba(87, 124, 147, 0.3);
-	    white-space: nowrap;
-	    font-weight: 500;
-	}
-	.gnb ul li a {
-		padding: 16px 12px;
-	  	width: 100%;
-	  	text-align: center;
-	}
-	/* nav 액티브 */
-	.gnb ul li.sub_on .sub {
-	  height: 152px; /* 38*4px */
-	}
-	.gnb > ul > li:hover {
-	  background: #ffffffcc;
-	}
-	.gnb > ul > li:hover > a {
-	  color: #577c93;
-	}
-	.gnb > ul > li.active,
-	.gnb > ul > li.subpage_on {
-	  background: #ffffff33;
-	}
-	.gnb ul li .sub li a:hover {
-	  opacity: 1;
-	  background: #577c93;
-	  color: #fff;
-	  width: 100%;
-	}
-	.photo {
-	    background-size: cover;
-	    background-position: top;
-	    background-color: #ffffff33;
-	    width: 180px;
-	    height: 240px;
-	    margin-bottom: 20px;
-	}
-	.section_title{
-		font-size: 40px;
-		text-align: center;
-		color: #fff;
-		font-family: 'KNUTRUTHTTF';
-	}
-	.about_detail {
-		display: flex;
-		height: 70%;
-	}
-	.about_detail > div > div {
-		margin-bottom: 30px;
-		color: #fff;
-	}
-	.about_detail > div:nth-child(1){
-		margin: 0 50px;
-	}
-	.about_detail > div:nth-child(1) > div ul li{
-	    margin-bottom: 8px;
-	    text-align: right;
-	}
-	.about_detail > div:nth-child(2) > div ul li{
-		display: flex;
-		margin-bottom: 8px;
-	}
-	.about_detail > div:nth-child(2) > div ul li p:nth-child(1){
-		margin-right: 20px;
-		width: 100px;
-	}
-	.about_detail > div:nth-child(2) {
-		margin-left: 50px;
-	}
-	.about_detail > div:nth-child(2) > div:nth-child(4)> ul li p:nth-child(1){
-		width: 150px;
-	}
-	.subheading{
-		font-size: 1.25rem;
-	    color: #fff;
-	    font-family: 'KNUTRUTHTTF';
-	    font-weight: 600;
-	    margin-bottom: 10px;
-	}
-	.skill_box{
-		width: 100%;
-		height: 100%;
-		border: 1px solid #fff;
-		border-radius: 10px;
-		margin: 0 5px;
-		background-color: #fff;
-		padding: 10px 10px;
-	}
-	.small_skill_box{
-		height: 49%;
-		border: 1px solid #fff;
-		border-radius: 10px;
-		background-color: #fff;
-		padding: 10px 10px;
-		margin-bottom: 10px;
-	}
-	.skill_boxs{
-		width: 100%;
-		height: 100%;
-		margin: 0 5px;
-	}
-	.skill_detail{
-		display: flex;
-		height: 70%;
-		text-align: center;
-	}
-	.skill_detail img{
-		width: 70%;
-	}
-	.project_detail{
-		height: 70%;
-		text-align: center;
-		border: 1px solid #fff;
-		border-radius: 10px;
-		background-color: #fff;
-		display: flex;
-	}
-	.project_detail img{
-		border-radius: 10px;
-		width: 100%;
-	}
-	.project_detail > div {
-		margin: auto 30px;
-		margin-right: 70px;
-		text-align: left;
-	}
-	.project_detail > div > p{
-		margin: 15px 0;
-	}
-	.project_detail li {
-		display: flex;
-		margin: 15px 0;
-	}
-	.project_detail li p:nth-child(1) {
-		min-width: 120px;
-	}
-	.project_detail hr {
-		border: 1px solid #999999;
-	}
-	p {
-		font-size: 18px;
-	}
-	h2 {
-		font-size: 26px;
-	}
-	.slider {
-	    width: 100%;
-	    position: relative;
-	    margin-left: 50px;
-	    margin-right: 60px;
-	}
-	.slide {
-	    float: left;
-	    width: 100%;
-	    position: relative;
-	}
 </style>
 </head>
 <body>
 	<!-- 마우스커서 -->
 	<div id="cursor" class="intro_ani"></div>
-	
 	
 	<nav class="gnb">
       <h1>JaeYong Lee PORTFOLIO</h1>
@@ -231,21 +23,21 @@
         <li data-menuanchor="skillPage"><a href="#skillPage">SKILL</a></li>
         <li data-menuanchor="projectonePage"><a href="#projectonePage"><span class="mobile_skip">PROJECTS</span></a>
           <ul class="sub">
-            <li data-menuanchor="projectonePage"><a href="#projectonePage">1st Proj</a></li>
-            <li data-menuanchor="projecttwoPage"><a href="#projecttwoPage">2nd Proj</a></li>
-            <li data-menuanchor="projectthreePage"><a href="#projectthreePage">3rd Proj</a></li>
+            <li data-menuanchor="projectonePage"><a href="#projectonePage">Spring Project</a></li>
+            <li data-menuanchor="projecttwoPage"><a href="#projecttwoPage">Oracle Project</a></li>
+            <li data-menuanchor="projectthreePage"><a href="#projectthreePage">Java Project</a></li>
           </ul>
         </li>
       </ul>
     </nav>
 	<div class="fullpage">
 	    <div class="section" id="intro">
-			<h1 class="section_title">intro</h1>
+			<h1 class="section_title">intro 어떻게 만들지</h1>
 	    	 <div class="section_detail" >
 	        </div>
 	    </div>
 		<div class="section" id="about">
-			<h1 class="section_title">안녕하세요</h1>
+			<h1 class="section_title">나를 나타내는 문구</h1>
 	        <div class="section_detail about_detail">
 	        	<div>
 					<img src="assets/img/ljy.jpg" class="photo">
@@ -270,7 +62,7 @@
 					<div>
 						<h2 class="subheading">ABOUT ME</h2>
 						<p>안녕하세요. Java 백엔드 개발자 이재용입니다.</p>
-						<p>대학교에서 처음으로 콘솔창에 "Hello World"를 출력하며 프로그래밍 언어를 접하게 되며, </p>
+						<p>자기소개 문구</p>
 					</div>
 					<hr>
 					<div>
@@ -380,7 +172,7 @@
 	        </div>
 	    </div>
 	    <div class="section" id="projectone">
-			<h1 class="section_title">프로젝트1</h1>
+			<h1 class="section_title">Spring Project</h1>
 	    	 <div class="section_detail project_detail" >
 	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
@@ -392,6 +184,9 @@
 				        </div>
 				        <div class="slide">
 				            <img src="assets/img/project1_view.png" alt="이미지 3">
+				        </div>
+				        <div class="slide">
+				            <img src="assets/img/project1_select.png" alt="이미지 4">
 				        </div>
 				    </div>
 	    	 	</div>
@@ -432,7 +227,7 @@
 	        </div>
 	    </div>
 	    <div class="section" id="projecttwo">
-			<h1 class="section_title">프로젝트2</h1>
+			<h1 class="section_title">Oracle Project</h1>
 	    	 <div class="section_detail project_detail" >
 	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
@@ -440,10 +235,13 @@
 				            <img src="assets/img/project3_1.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_find.png" alt="이미지 2">
+				            <img src="assets/img/project3_2.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_view.png" alt="이미지 3">
+				            <img src="assets/img/project3_3.png" alt="이미지 3">
+				        </div>
+				        <div class="slide">
+				            <img src="assets/img/project3_4.png" alt="이미지 4">
 				        </div>
 				    </div>
 	    	 	</div>
@@ -489,18 +287,24 @@
 	        </div>
 	    </div>
 	    <div class="section" id="projectthree">
-			<h1 class="section_title">프로젝트3</h1>
+			<h1 class="section_title">Java Project</h1>
 	    	 <div class="section_detail project_detail" >
 	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
 				        <div class="slide">
-				            <img src="assets/img/project1_main.png" alt="이미지 1">
+				            <img src="assets/img/project2_1.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_find.png" alt="이미지 2">
+				            <img src="assets/img/project2_2.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_view.png" alt="이미지 3">
+				            <img src="assets/img/project2_3.png" alt="이미지 3">
+				        </div>
+				        <div class="slide">
+				            <img src="assets/img/project2_4.png" alt="이미지 4">
+				        </div>
+				        <div class="slide">
+				            <img src="assets/img/project2_5.png" alt="이미지 5">
 				        </div>
 				    </div>
 	    	 	</div>
@@ -545,23 +349,21 @@
 <script>
 
 	$('.fullpage').fullpage({
+			//각 세션 명
 	        anchors : ['introPage','aboutPage','skillPage','projectonePage','projecttwoPage','projectthreePage'],
 	        //네비게이션 보이기
 	        navigation : true,
 	        //네비게이션 위치 지정
 	        navigationPosition : 'right',
+	        //네비게이션 이름 지정
+	        navigationTooltips: ['INTRO', 'ABOUT','SKILL','SPRING PROJECT','ORACLE PROJECT','JAVA PROJECT'],
 	        //각 섹션의 배경색상 지정 (6자의 핵사코드 작성가능)
 	        sectionsColor : ['#577c93','#577c93','#577c93','#577c93','#577c93','#577c93'],
-	        navigationTooltips: ['INTRO', 'ABOUT','SKILL','PROJECT_1','PROJECT_2','PROJECT_3'],
 	        scrollingSpeed: 1200,
 	        paddingTop: '80px',
 	        paddingBottom: '80px',
-	        
 	        //메뉴
 	        menu : '#myMenu',
-	        
-	        
-		    
 		    });
 	
 	

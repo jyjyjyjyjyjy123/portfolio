@@ -29,12 +29,13 @@ html.fp-enabled,
 }
 .fp-slides {
     z-index:1;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     overflow: hidden;
     position: relative;
     -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
     transition: all 0.3s ease-out;
+	box-shadow: 0 0 5px 1px gray;
 }
 .fp-section.fp-table, .fp-slide.fp-table {
     display: table;
@@ -50,6 +51,8 @@ html.fp-enabled,
 .fp-slidesContainer {
     float: left;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .fp-controlArrow {
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -70,16 +73,16 @@ html.fp-enabled,
 }
 .fp-controlArrow.fp-prev {
     left: -45px;
-    top: 50%;
+    top: 55%;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #000000 transparent transparent;
+    border-width: 28.5px 24px 28.5px 0;
+    border-color: transparent #577c93 transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: -45px;
-    top: 50%;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #000000;
+    top: 55%;
+    border-width: 28.5px 0 28.5px 24px;
+    border-color: transparent transparent transparent #577c93;
 }
 .fp-scrollable {
     overflow: hidden;
