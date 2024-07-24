@@ -4,21 +4,24 @@
 <meta charset="UTF-8">
 <title>portfolio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="assets/js/jquery.fullpage.js"></script>
-<link rel="stylesheet" href="assets/css/jquery.fullpage.css">
-<link rel="stylesheet" href="assets/css/page.css">
+<script src="./js/jquery.fullpage.js"></script>
+<link rel="stylesheet" href="./css/jquery.fullpage.css">
+<link rel="stylesheet" href="./css/page.css">
 <style>
 	
 </style>
 </head>
 <body>
+	<!-- 마우스커서 -->
+	<div id="cursor" class="intro_ani"></div>
+	
 	<nav class="gnb">
       <h1>JaeYong Lee PORTFOLIO</h1>
       <ul id="myMenu">
         <li data-menuanchor="introPage"><a href="#introPage">INTRO</a></li>
         <li data-menuanchor="aboutPage"><a href="#aboutPage">ABOUT</a></li>
         <li data-menuanchor="skillPage"><a href="#skillPage">SKILL</a></li>
-        <li data-menuanchor="projectonePage,projecttwoPage"><a href="#projectonePage"><span class="mobile_skip">PROJECTS</span></a>
+        <li data-menuanchor="projectonePage"><a href="#projectonePage"><span class="mobile_skip">PROJECTS</span></a>
           <ul class="sub">
             <li data-menuanchor="projectonePage"><a href="#projectonePage">SpringBoot</a></li>
             <li data-menuanchor="projecttwoPage"><a href="#projecttwoPage">Spring</a></li>
@@ -30,16 +33,15 @@
     </nav>
 	<div class="fullpage">
 	    <div class="section" id="intro">
-			<div id="typo_1">
-                <h1>Lee JaeYong</h1>
-                <h2>BACK-END PORTFOLIO</h2>
-            </div>
+			<h1 class="section_title">intro 어떻게 만들지</h1>
+	    	 <div class="section_detail" >
+	        </div>
 	    </div>
 		<div class="section" id="about">
 			<h1 class="section_title">안녕하세요. Java 백엔드 개발자 이재용입니다.</h1>
 	        <div class="section_detail about_detail">
 	        	<div>
-					<img src="assets/img/ljy.jpg" class="photo">
+					<img src="./img/ljy.jpg" class="photo">
 					<div class="my_info">
 						<ul>
 							<li>
@@ -67,7 +69,7 @@
 						<p>저는 소프트웨어 개발에 높은 열정을 가지고 있으며, 프로젝트 과정 중에서 성공과 실패를 분석하여, 이를 통해 더 나은 결과를 이끌어낼 수 있도록 노력합니다.</p>
 						<p>Spring, SQL, Java, Python 등의 다양한 기술을 활용하여 웹 애플리케이션을 구축하고 응용 프로그램을 개발하고 있습니다.</p>
 					</div>
-					<hr style="margin-right: 5%; margin-bottom: 20px;">
+					<hr style="margin-right: 10px; margin-bottom: 20px;">
 					<div>
 						<h2 class="subheading">CERTIFICATE</h2>
 						<ul>
@@ -103,8 +105,8 @@
 						<ul>
 							<li>
 								<p>GitHub</p>
-								<a class="git_hub" href="https://github.com/jyjyjyjyjyjy123">
-									<p>바로가기</p>
+								<a href="https://github.com/jyjyjyjyjyjy123">
+									<p style="color: blue;">바로가기</p>
 								</a>
 							</li>
 						</ul>
@@ -119,28 +121,28 @@
 					<h2>Back-End</h2>
 					<hr>
 					<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-						<img src="assets/img/Java_logo.png"/>
-						<img src="assets/img/spring_logo.png"/>
-						<img src="assets/img/spring_boot_logo.png"/>
-						<img src="assets/img/mybatis_logo.png"/>
-						<img src="assets/img/rest_api_icon.png"/>
+						<img src="./img/Java_logo.png"/>
+						<img src="./img/spring_logo.png"/>
+						<img src="./img/spring_boot_logo.png"/>
+						<img src="./img/mybatis_logo.png"/>
+						<img src="./img/rest_api_icon.png"/>
 					</div>
 				</div>
-				<div class="skill_boxs">
+				<div class="skill_boxs_FV">
 					<div class="small_skill_box">
 						<h2>Front-End</h2>
 						<hr>
 						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-							<img src="assets/img/html_css_js.png" />
-							<img src="assets/img/jQuery_logo.png" />
+							<img src="./img/html_css_js.png" />
+							<img src="./img/jQuery_logo.png" />
 						</div>
 					</div>
 					<div class="small_skill_box">
 						<h2>Version Control</h2>
 						<hr>
 						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-							<img src="assets/img/github_logo.png"/>
-							<img src="assets/img/sourcetree_logo.png"/>
+							<img src="./img/github_logo.png"/>
+							<img src="./img/sourcetree_logo.png"/>
 						</div>
 					</div>
 				</div>
@@ -148,27 +150,27 @@
 					<h2>Tools</h2>
 					<hr>
 					<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-						<img src="assets/img/eclipse_logo.png"/>
-						<img src="assets/img/visualstudio_code_logo.png"/>
-						<img src="assets/img/sql_developer_logo.jpg"/>
-						<img src="assets/img/exerd_logo.jpg"/>
-						<img src="assets/img/postman_logo.png"/>
+						<img src="./img/eclipse_logo.png"/>
+						<img src="./img/visualstudio_code_logo.png"/>
+						<img src="./img/sql_developer_logo.jpg"/>
+						<img src="./img/exerd_logo.jpg"/>
+						<img src="./img/postman_logo.png"/>
 					</div>
 				</div>
-				<div class="skill_boxs">
-					<div class="small_skill_box" style="height: 59%;">
+				<div class="skill_boxs_SD">
+					<div class="small_skill_box">
 						<h2>Server</h2>
 						<hr>
 						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-							<img src="assets/img/apache_tomcat_logo.png"/>
-							<img src="assets/img/amazon_ec2_logo.png"/>
+							<img src="./img/apache_tomcat_logo.png"/>
+							<img src="./img/amazon_ec2_logo.png"/>
 						</div>
 					</div>
-					<div class="small_skill_box" style="height: 39%;">
+					<div class="small_skill_box">
 						<h2>DB</h2>
 						<hr>
 						<div style="display: flex; height: 90%; align-content: space-around; justify-content: center; flex-wrap: wrap;">
-							<img src="assets/img/oracle_logo.png" />
+							<img src="./img/oracle_logo.png" />
 						</div>
 					</div>
 				</div>
@@ -176,31 +178,30 @@
 	    </div>
 	    <div class="section" id="projectone">
 			<h1 class="section_title">SpringBoot Project</h1>
-			<hr style="margin: 1% 10%;">
 	    	 <div class="section_detail project_detail" >
-	    	 	<div>
+	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
 				        <div class="slide">
-				            <img src="assets/img/project0_1.png" alt="이미지 1">
+				            <img src="./img/project0_1.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project0_2.png" alt="이미지 2">
+				            <img src="./img/project0_2.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project0_3.png" alt="이미지 3">
+				            <img src="./img/project0_3.png" alt="이미지 3">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project0_4.png" alt="이미지 4">
+				            <img src="./img/project0_4.png" alt="이미지 4">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project0_5.png" alt="이미지 4">
+				            <img src="./img/project0_5.png" alt="이미지 4">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project0_6.png" alt="이미지 4">
+				            <img src="./img/project0_6.png" alt="이미지 4">
 				        </div>
 				    </div>
 	    	 	</div>
-	    	 	<div>
+	    	 	<div style="width: 70%; margin-left: 70px;">
 	    	 		<p>
 	    	 			계좌관리, 금융 상품 및 서비스를 조회하고 신청이 가능한, 편리한 금융 서비스 제공 및 고객 경험 개선을 한 금융 서비스 플랫폼이다.
 	    	 		</p>
@@ -228,8 +229,8 @@
 						</li>
 						<li>
 							<p>GitHub</p>
-							<a class="git_hub" href="https://github.com/Isaac-Seungwon/atlan-bank">
-								<p>바로가기</p>
+							<a href="https://github.com/Isaac-Seungwon/atlan-bank">
+								<p style="color: blue;">바로가기</p>
 							</a>
 						</li>
 					</ul>
@@ -238,25 +239,24 @@
 	    </div>
 	    <div class="section" id="projecttwo">
 			<h1 class="section_title">Spring Project</h1>
-			<hr style="margin: 1% 10%;">
 	    	 <div class="section_detail project_detail" >
-	    	 	<div>
+	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
 				        <div class="slide">
-				            <img src="assets/img/project1_main.png" alt="이미지 1">
+				            <img src="./img/project1_main.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_find.png" alt="이미지 2">
+				            <img src="./img/project1_find.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_view.png" alt="이미지 3">
+				            <img src="./img/project1_view.png" alt="이미지 3">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project1_select.png" alt="이미지 4">
+				            <img src="./img/project1_select.png" alt="이미지 4">
 				        </div>
 				    </div>
 	    	 	</div>
-	    	 	<div>
+	    	 	<div style="width: 70%; margin-left: 70px;">
 	    	 		<p>
 	    	 			병원 약국 통합 검색, 예약 및 의학 정보 시스템은 다양한 의료 기관 및 약국 정보 검색, 예약 기능, 의학 정보 제공을 통해 사용자들이 효율적으로 의료 서비스를 이용할 수 있도록 구축된 플랫폼이다.
 	    	 		</p>
@@ -284,8 +284,8 @@
 						</li>
 						<li>
 							<p>GitHub</p>
-							<a class="git_hub" href="https://github.com/jyjyjyjyjyjy123/SY_spring_Project">
-								<p>바로가기</p>
+							<a href="https://github.com/jyjyjyjyjyjy123/SY_spring_Project">
+								<p style="color: blue;">바로가기</p>
 							</a>
 						</li>
 					</ul>
@@ -294,25 +294,24 @@
 	    </div>
 	    <div class="section" id="projectthree">
 			<h1 class="section_title">Oracle Project</h1>
-			<hr style="margin: 1% 10%;">
 	    	 <div class="section_detail project_detail" >
-	    	 	<div>
+	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
 				        <div class="slide">
-				            <img src="assets/img/project3_1.png" alt="이미지 1">
+				            <img src="./img/project3_1.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project3_2.png" alt="이미지 2">
+				            <img src="./img/project3_2.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project3_3(2).png" alt="이미지 3">
+				            <img src="./img/project3_3(2).png" alt="이미지 3">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project3_4.png" alt="이미지 4">
+				            <img src="./img/project3_4.png" alt="이미지 4">
 				        </div>
 				    </div>
 	    	 	</div>
-	    	 	<div>
+	    	 	<div style="width: 70%; margin-left: 70px;">
 	    	 		<p>
 	    	 			관리시스템 내 저장된 데이터 최적화, 데이터베이스 자체 기능 구현 및 최적화한 교육센터 관리시스템 데이터베이스 설계
 	    	 		</p>
@@ -321,7 +320,7 @@
 						<li>
 							<p>주요 기능</p>
 							<p>
-								기초 정보 관리, 개설 과정 및 과목 관리, 교육생 관리, 시험 관리, 성적 및 출결 관리, 조회, 컴퓨터 이상 관리 및 조회, 수료생 사후관리, 설문조사 관리, 진단평가 관리, 학습안내서 및 강의 스케줄 조회, 배점, 성적 입출력, 설문조사 관리 및 조회, 진단평가 조회
+								기초 정보 관리, 개설 과정 및 과목 관리, 교육생 관리, 시험 관리, 성적 및 출결 관리, 조회, 컴퓨터 이상 관리 및 조회, 수료생 사후관리, 설문조사 관리, 진단평가 관리, 학습안내서 및 강의 스케줄 조회, 배점, 성적 입출력, 수료생 사후 관리 및 조회, 진단평가 조회
 							</p>
 						</li>
 						<li>
@@ -342,8 +341,8 @@
 						</li>
 						<li>
 							<p>GitHub</p>
-							<a class="git_hub" href="https://github.com/jyjyjyjyjyjy123/SY_oracle_Project">
-								<p>바로가기</p>
+							<a href="https://github.com/jyjyjyjyjyjy123/SY_oracle_Project">
+								<p style="color: blue;">바로가기</p>
 							</a>
 						</li>
 					</ul>
@@ -352,28 +351,27 @@
 	    </div>
 	    <div class="section" id="projectfour">
 			<h1 class="section_title">Java Project</h1>
-			<hr style="margin: 1% 10%;">
 	    	 <div class="section_detail project_detail" >
-	    	 	<div>
+	    	 	<div style="width: 30%;">
 		    	 	<div class="slider">
 				        <div class="slide">
-				            <img src="assets/img/project2_1.png" alt="이미지 1">
+				            <img src="./img/project2_1.png" alt="이미지 1">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project2_2.png" alt="이미지 2">
+				            <img src="./img/project2_2.png" alt="이미지 2">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project2_3.png" alt="이미지 3">
+				            <img src="./img/project2_3.png" alt="이미지 3">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project2_4.png" alt="이미지 4">
+				            <img src="./img/project2_4.png" alt="이미지 4">
 				        </div>
 				        <div class="slide">
-				            <img src="assets/img/project2_5.png" alt="이미지 5">
+				            <img src="./img/project2_5.png" alt="이미지 5">
 				        </div>
 				    </div>
 	    	 	</div>
-	    	 	<div>
+	    	 	<div style="width: 70%; margin-left: 70px;">
 	    	 		<p>
 	    	 			다양한 렌탈 업체를 모아서 사용자에게 편리함을 제공하는 렌탈업체 중개 서비스 플랫폼을 자바 콘슬의 파일 입출력 기반의 데이터 처리방식으로 제작한 프로젝트
 	    	 		</p>
@@ -401,8 +399,8 @@
 						</li>
 						<li>
 							<p>GitHub</p>
-							<a class="git_hub" href="https://github.com/jyjyjyjyjyjy123/SY_Java_Project">
-								<p>바로가기</p>
+							<a href="https://github.com/jyjyjyjyjyjy123/SY_Java_Project">
+								<p style="color: blue;">바로가기</p>
 							</a>
 						</li>
 					</ul>
@@ -423,9 +421,9 @@
 	        //네비게이션 이름 지정
 	        navigationTooltips: ['INTRO', 'ABOUT','SKILL','SPRINGBOOT PROJECT','SPRING PROJECT','ORACLE PROJECT','JAVA PROJECT'],
 	        //각 섹션의 배경색상 지정 (6자의 핵사코드 작성가능)
-	        sectionsColor : ['#003b5f','#003b5f','#003b5f','#003b5f','#003b5f','#003b5f','#003b5f'],
+	        sectionsColor : ['#577c93','#577c93','#577c93','#577c93','#577c93','#577c93','#577c93'],
 	        scrollingSpeed: 1200,
-	        paddingTop: '160px',
+	        paddingTop: '120px',
 	        paddingBottom: '80px',
 	        //메뉴
 	        menu : '#myMenu',
@@ -442,6 +440,18 @@
 	main.addEventListener('mouseout', function () {
 	  sub.style.transition = 'none';
 	  sub.style.height = '0';
+	});
+	
+	//mouse cursor
+	let mouseX;
+	let mouseY;
+	const cursor = document.querySelector('#cursor');
+
+	document.addEventListener('mousemove', function (e) {
+	  mouseX = e.clientX;
+	  mouseY = e.clientY;
+	  cursor.style.left = mouseX + 'px';
+	  cursor.style.top = mouseY + 'px';
 	});
 	
 	

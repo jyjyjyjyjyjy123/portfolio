@@ -79,7 +79,7 @@ html.fp-enabled,
     border-color: transparent #577c93 transparent transparent;
 }
 .fp-controlArrow.fp-next {
-    right: -45px;
+    right: -25px;
     top: 55%;
     border-width: 28.5px 0 28.5px 24px;
     border-color: transparent transparent transparent #577c93;
